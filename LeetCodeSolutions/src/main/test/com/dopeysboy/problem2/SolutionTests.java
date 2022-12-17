@@ -35,18 +35,14 @@ class SolutionTests {
 		 * ln2 = [5, 6, 4]
 		 * expected = [7, 0, 8]
 		 */
+		int[] ln1Input = {2, 4, 3};
+		ln1 = new ListNode(ln1Input);
 		
-		ln1 = new ListNode(2, 
-				new ListNode(4, 
-					new ListNode(3)));
+		int[] ln2Input = {5, 6, 4};
+		ln2 = new ListNode(ln2Input);
 		
-		ln2 = new ListNode(5,
-				new ListNode(6,
-					new ListNode(4)));
-		
-		expected = new ListNode(7,
-					new ListNode(0, 
-						new ListNode(8)));
+		int[] expectedInput = {7, 0, 8};
+		expected = new ListNode(expectedInput);
 		
 		actual = solution.addTwoNumbers(ln1, ln2);
 		
@@ -76,26 +72,14 @@ class SolutionTests {
 		 * ln2 = [9,9,9,9]
 		 * expected = [8,9,9,9,0,0,0,1]
 		 */
-		ln1 = new ListNode(9,
-				new ListNode(9,
-					new ListNode(9,
-						new ListNode(9,
-							new ListNode(9,
-								new ListNode(9,
-										new ListNode(9)))))));
-		ln2 = new ListNode(9,
-				new ListNode(9,
-					new ListNode(9,
-						new ListNode(9))));
+		int[] ln1Input = {9, 9, 9, 9, 9, 9, 9};
+		ln1 = new ListNode(ln1Input);
 		
-		expected = new ListNode(8,
-					new ListNode(9,
-						new ListNode(9,
-							new ListNode(9,
-								new ListNode(0,
-									new ListNode(0,
-										new ListNode(0,
-											new ListNode(1))))))));
+		int[] ln2Input = {9, 9, 9, 9};
+		ln2 = new ListNode(ln2Input);
+		
+		int[] expectedInput = {8, 9, 9, 9, 0, 0, 0, 1};
+		expected = new ListNode(expectedInput);
 		
 		actual = solution.addTwoNumbers(ln1, ln2);
 		

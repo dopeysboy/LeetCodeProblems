@@ -1,9 +1,9 @@
-package com.dopeysboy.problem2;
+package com.dopeysboy.problem143;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-public class ListNode {
+class ListNode {
 	int val;
 	ListNode next;
 
@@ -13,19 +13,19 @@ public class ListNode {
 		val = x;
 		next = null;
 	}
-
+	
 	public ListNode(int x, ListNode next) {
 		val = x;
 		this.next = next;
 	}
-
+	
 	public ListNode(int[] values) {
 		this.val = values[0];
-		if (values.length > 1) {
+		if(values.length > 1) {
 			this.next = new ListNode(Arrays.copyOfRange(values, 1, values.length));
 		}
 	}
-
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(next, val);
